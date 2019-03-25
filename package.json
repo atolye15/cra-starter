@@ -18,9 +18,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:ts": "tsc && tslint --project tsconfig.json",
-    "lint": "yarn run lint:ts",
+    "lint:css": "stylelint --syntax scss 'src/**/*.scss'",
+    "lint": "yarn run lint:ts && yarn run lint:css",
     "format:ts": "prettier --write 'src/**/*.{ts,tsx}' && tslint --fix --project .",
-    "format": "yarn run format:ts",
+    "format:css": "prettier-stylelint --quiet --write 'src/**/*.scss'",
+    "format": "yarn run format:ts && yarn run format:css",
     "format:check": "prettier -c 'src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
