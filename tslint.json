@@ -1,0 +1,13 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-react",
+    "tslint-react-a11y",
+    "tslint-config-prettier",
+    "tslint-consistent-codestyle"
+  ],
+  "jsRules": {},
+  "rules": {},
+  "rulesDirectory": [],
+  "linterOptions": {}
+}

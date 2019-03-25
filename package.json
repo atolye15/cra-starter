@@ -17,7 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format:ts": "prettier --write 'src/**/*.{ts,tsx}'",
+    "lint:ts": "tsc && tslint --project tsconfig.json",
+    "lint": "yarn run lint:ts",
+    "format:ts": "prettier --write 'src/**/*.{ts,tsx}' && tslint --fix --project .",
     "format": "yarn run format:ts",
     "format:check": "prettier -c 'src/**/*.{ts,tsx}'"
   },
@@ -31,6 +33,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-consistent-codestyle": "^1.15.1",
+    "tslint-react": "^3.6.0",
+    "tslint-react-a11y": "^1.0.0"
   }
 }
