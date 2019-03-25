@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.11",
+    "@types/jest": "^24.0.11",
     "@types/node": "11.11.6",
     "@types/react": "16.8.8",
     "@types/react-dom": "16.8.3",
@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "yarn run test --coverage",
     "eject": "react-scripts eject",
     "lint:ts": "tsc && tslint --project tsconfig.json",
     "lint:css": "stylelint --syntax scss 'src/**/*.scss'",
@@ -35,12 +36,45 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
+    "prettier-stylelint": "^0.4.2",
+    "react-test-renderer": "^16.8.5",
+    "stylelint": "^9.10.1",
+    "stylelint-config-prettier": "^5.0.0",
+    "stylelint-config-sass-guidelines": "^5.3.0",
+    "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
+    "stylelint-declaration-strict-value": "^1.1.2",
+    "stylelint-order": "^2.1.0",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-consistent-codestyle": "^1.15.1",
     "tslint-react": "^3.6.0",
     "tslint-react-a11y": "^1.0.0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx",
+      "!src/setupTests.ts",
+      "!src/components/**/index.{ts,tsx}",
+      "!src/components/**/*.stories.{ts,tsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   }
 }
