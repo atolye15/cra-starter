@@ -1,6 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { setConfig } from 'react-hot-loader';
 
-import App from "./App";
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+setConfig({
+  ignoreSFC: true,
+  pureRender: true,
+});
+
+ReactDOM.render(<App />, document.getElementById('root'));
