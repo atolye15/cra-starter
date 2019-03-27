@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import ReactDOM from 'react-dom';
 import { setConfig } from 'react-hot-loader';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 
@@ -9,4 +10,10 @@ setConfig({
   pureRender: true,
 });
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Root: FunctionComponent = () => (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
+ReactDOM.render(<Root />, document.getElementById('root'));
