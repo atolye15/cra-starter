@@ -30,7 +30,8 @@
     "format": "yarn run format:ts && yarn run format:css",
     "format:check": "prettier -c 'src/**/*.{ts,tsx}'",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy": "sh deploy.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -71,6 +72,7 @@
     "stylelint-declaration-block-no-ignored-properties": "^1.1.0",
     "stylelint-declaration-strict-value": "^1.1.2",
     "stylelint-order": "^2.1.0",
+    "surge": "^0.20.3",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-consistent-codestyle": "^1.15.1",
