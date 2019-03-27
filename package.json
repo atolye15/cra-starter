@@ -26,7 +26,9 @@
     "format:ts": "prettier --write 'src/**/*.{ts,tsx}' && tslint --fix --project .",
     "format:css": "prettier-stylelint --quiet --write 'src/**/*.scss'",
     "format": "yarn run format:ts && yarn run format:css",
-    "format:check": "prettier -c 'src/**/*.{ts,tsx}'"
+    "format:check": "prettier -c 'src/**/*.{ts,tsx}'",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,9 +40,17 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@storybook/addon-actions": "^5.0.5",
+    "@storybook/addon-info": "^5.0.5",
+    "@storybook/addon-links": "^5.0.5",
+    "@storybook/addons": "^5.0.5",
+    "@storybook/react": "^5.0.5",
     "@types/classnames": "^2.2.7",
     "@types/enzyme": "^3.9.1",
     "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/storybook__react": "^4.0.1",
+    "babel-loader": "^8.0.5",
     "customize-cra": "^0.2.12",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
@@ -49,6 +59,7 @@
     "prettier": "^1.16.4",
     "prettier-stylelint": "^0.4.2",
     "react-app-rewired": "^2.1.1",
+    "react-docgen-typescript-loader": "^3.0.1",
     "react-test-renderer": "^16.8.5",
     "stylelint": "^9.10.1",
     "stylelint-config-prettier": "^5.0.0",
