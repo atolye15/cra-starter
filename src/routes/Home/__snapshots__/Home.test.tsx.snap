@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h1>
+    Home page
+  </h1>
+  <Link
+    to="/feed"
+  >
+    Go to feed
+  </Link>
+</div>
+`;

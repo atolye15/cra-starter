@@ -86,7 +86,8 @@
       "!src/index.tsx",
       "!src/setupTests.ts",
       "!src/components/**/index.{ts,tsx}",
-      "!src/components/**/*.stories.{ts,tsx}"
+      "!src/components/**/*.stories.{ts,tsx}",
+      "!src/routes/**/index.{ts,tsx}"
     ],
     "coverageThreshold": {
       "global": {
