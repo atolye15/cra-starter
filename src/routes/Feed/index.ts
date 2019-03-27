@@ -1,3 +1,10 @@
-import Feed from './Feed';
+import Loadable from 'react-loadable';
 
-export default Feed;
+import Loading from '../../components/Loading';
+
+const LoadableFeed = Loadable({
+  loader: () => import('./Feed'),
+  loading: Loading as any,
+});
+
+export default LoadableFeed;

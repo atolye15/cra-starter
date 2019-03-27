@@ -1,3 +1,10 @@
-import Home from './Home';
+import Loadable from 'react-loadable';
 
-export default Home;
+import Loading from '../../components/Loading';
+
+const LoadableHome = Loadable({
+  loader: () => import('./Home'),
+  loading: Loading as any,
+});
+
+export default LoadableHome;
