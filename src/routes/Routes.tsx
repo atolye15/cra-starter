@@ -6,8 +6,8 @@ import Feed from './Feed';
 
 const Routes: FunctionComponent = () => (
   <Switch>
-    <Route path="/" exact={true} component={Home} />
-    <Route path="/feed" exact={true} component={Feed} />
+    <Route path="/" exact component={Home} />
+    <Route path="/feed" exact component={Feed} />
   </Switch>
 );
 
