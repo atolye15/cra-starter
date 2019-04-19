@@ -7,13 +7,13 @@ import Routes from './routes';
 it('has a header', () => {
   const wrapper = shallow(<App />);
 
-  expect(wrapper.containsMatchingElement(<header />)).toBe(true);
+  expect(wrapper.containsMatchingElement(<header>Header</header>)).toBe(true);
 });
 
 it('has a footer', () => {
   const wrapper = shallow(<App />);
 
-  expect(wrapper.containsMatchingElement(<footer />)).toBe(true);
+  expect(wrapper.containsMatchingElement(<footer>Footer</footer>)).toBe(true);
 });
 
 it('contains routes', () => {
