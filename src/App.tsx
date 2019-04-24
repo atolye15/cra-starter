@@ -1,5 +1,5 @@
+import { hot } from 'react-hot-loader/root';
 import React, { FunctionComponent, Fragment } from 'react';
-import { hot } from 'react-hot-loader';
 
 import Routes from './routes';
 
@@ -11,4 +11,4 @@ const App: FunctionComponent = () => (
   </Fragment>
 );
 
-export default hot(module)(App);
+export default hot(App);
