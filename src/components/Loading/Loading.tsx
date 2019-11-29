@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 
-const Loading: FunctionComponent = () => <p>Loading...</p>;
+const Loading: FC = () => <p>Loading...</p>;
 
 export default Loading;
