@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FC } from 'react';
 import cx from 'classnames';
 
 import './Button.scss';
@@ -8,7 +8,7 @@ type Props = JSX.IntrinsicElements['button'] & {
   secondary?: boolean;
 };
 
-const Button: FunctionComponent<Props> = ({ primary, secondary, className, children, ...rest }) => {
+const Button: FC<Props> = ({ primary, secondary, className, children, onClick }) => {
   const classNames = cx(
     'Button',
     { 'Button-primary': primary, 'Button-secondary': secondary },
@@ -16,7 +16,7 @@ const Button: FunctionComponent<Props> = ({ primary, secondary, className, child
   );
 
   return (
-    <button className={classNames} {...rest}>
+    <button className={classNames} onClick={onClick}>
       {children}
     </button>
   );
